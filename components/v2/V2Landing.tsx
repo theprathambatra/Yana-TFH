@@ -210,7 +210,25 @@ export function V2Landing() {
             <div className={styles.heroImageShade} />
             <div className={styles.imageNote}><span>Bonjour,</span><strong>I&apos;m Yana.</strong></div>
           </div>
-          <div className={styles.heroOrbit} aria-hidden="true"><span>ç</span></div>
+          <motion.div
+  className={styles.heroCredential}
+  aria-hidden="true"
+  initial={{ opacity: 0, x: -24 }}
+  animate={{ opacity: 1, x: 0 }}
+  whileHover={{ y: -4 }}
+  transition={{
+    duration: .8,
+    delay: .55,
+    ease: [0.22, 1, 0.36, 1]
+  }}
+>
+  <span className={styles.credentialLevel}>C1</span>
+
+  <div className={styles.credentialCopy}>
+    <strong>Certified</strong>
+    <small>French tutor</small>
+  </div>
+</motion.div>
           <div className={styles.heroTag}>TEF · TCF · DELF</div>
         </motion.div>
 
